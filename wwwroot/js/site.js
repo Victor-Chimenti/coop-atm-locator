@@ -1,4 +1,29 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/**
+ * @author Victor Chimenti
+ * @file site.js
+ */
 
-// Write your JavaScript code.
+
+
+
+// ** Globals ** //
+
+
+
+
+// *** jquery card holder for items remaining to deisplay after user filter-search selections *** //
+var visibleItems = [];
+var assignVisibleItems = function () { };
+
+
+
+
+
+// *** data received by map from ajax call to locations controller *** //
+var records = [];
+
+
+
+
+// *** set is populated with card items that become hidden during filter search
+var removeMarker = new Set();
