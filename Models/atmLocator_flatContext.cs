@@ -26,8 +26,6 @@ namespace coop_atm_locator.Models
                 
                 entity.HasKey(e => new { e.Name, e.ReferenceId });
 
-/*                entity.HasNoKey();*/
-
                 entity.Property(e => e.AcceptCash).HasMaxLength(50);
 
                 entity.Property(e => e.AcceptDeposit).HasMaxLength(50);
