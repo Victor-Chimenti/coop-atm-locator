@@ -23,7 +23,10 @@ namespace coop_atm_locator.Models
         {
             modelBuilder.Entity<Locations>(entity =>
             {
-                entity.HasNoKey();
+                
+                entity.HasKey(e => new { e.Name, e.ReferenceId });
+
+/*                entity.HasNoKey();*/
 
                 entity.Property(e => e.AcceptCash).HasMaxLength(50);
 
