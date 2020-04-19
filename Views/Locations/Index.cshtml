@@ -1,384 +1,160 @@
-﻿@model IEnumerable<coop_atm_locator.Models.Locations>
+﻿@using coop_atm_locator.Models
+@model CleanLocationViewModel
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "MapHawks";
 }
 
-<h1>Index</h1>
+<script type="text/javascript" src="~/js/location.js"></script>
+<script type="text/javascript">
+    getLocation()
+</script>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.County)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PostalCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fax)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WebAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Latitude)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Longitude)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hours)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RetailOutlet)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RestrictedAccess)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AcceptDeposit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AcceptCash)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EnvelopeRequired)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OnMilitaryBase)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OnPremise)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Surcharge)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Access)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccessNotes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InstallationType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HandicapAccess)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LocationType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursMonOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursMonClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursTueOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursTueClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursWedOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursWedClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursThuOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursThuClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursFriOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursFriClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursSatOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursSatClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursSunOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursSunClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtmonOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtmonClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDttueOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDttueClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtwedOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtwedClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtthuOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtthuClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtfriOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtfriClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtsatOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtsatClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtsunOpen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoursDtsunClose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cashless)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DriveThruOnly)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LimitedTransactions)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MilitaryIdRequired)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SelfServiceDevice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SelfServiceOnly)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.County)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PostalCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fax)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WebAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Latitude)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Longitude)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hours)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RetailOutlet)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RestrictedAccess)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AcceptDeposit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AcceptCash)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnvelopeRequired)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OnMilitaryBase)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OnPremise)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surcharge)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Access)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccessNotes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InstallationType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HandicapAccess)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LocationType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursMonOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursMonClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursTueOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursTueClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursWedOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursWedClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursThuOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursThuClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursFriOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursFriClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursSatOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursSatClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursSunOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursSunClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtmonOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtmonClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDttueOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDttueClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtwedOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtwedClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtthuOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtthuClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtfriOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtfriClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtsatOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtsatClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtsunOpen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoursDtsunClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cashless)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DriveThruOnly)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LimitedTransactions)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MilitaryIdRequired)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SelfServiceDevice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SelfServiceOnly)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<!--
+    main row is split into three columns
+        filter-wrapper  :   Left    :   Filter-Search Parameters
+        center-index    :   Center  :   Houses the Map
+        sidebar-wrapper :   Right   :   Location Cards
+ -->
+<div class="container-fluid">
+    <div class="row" id="main-row">
+        <div class="col-xs-12 order-2 col-lg-3 order-lg-first" id="filter-wrapper">
+            <h3 id="filter-head">Refine by</h3>
+            <div id="filterSearch-wrapper">
+                <form class="searchField d-block">
+                    <fieldset class="atmSearch">
+                        <div>
+                            <input type="text" class="form-control" name="searchCards" id="keyword_search" placeholder="Search by Keyword" autofocus aria-label="Search Keyword" />
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="text-left accordion panel" id="atm-panel">
+                    <div class="panel-header">
+                        <a href="#" class="btn-link" id="atm-locations" data-toggle="collapse" data-target="#atm-qualities" aria-expanded="false" aria-controls="atm-qualities">
+                            <span class="panelTitleBox">
+                                <i class="fas fa-minus"></i><i class="fas fa-plus"></i>
+                                <span class="panel-name">Show ATMs With...</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="panel-body collapse in" id="atm-qualities" aria-expanded="false">
+                        <form class="searchATM d-block">
+                            <fieldset class="atmSearch">
+                                <div>
+                                    <input type="checkbox" id="Hours" name="24hrs / Business Hours Access" value="24">
+                                    <label for="Hours">24 Hour</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="DriveThruOnly" name="Drive Thru Only" value="Drive">
+                                    <label for="DriveThruOnly">Drive Up</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="Surcharge" name="Surcharge" value="No">
+                                    <label for="Surcharge">Surcharge Free</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="AcceptDeposit" name="Accepts Deposit" value="Yes">
+                                    <label for="AcceptDeposit">Accepts Deposits</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="text-left accordion panel" id="nfs-header">
+                        <!-- this accordion functions only below 767px for mobile -->
+                        <div class="panel-header">
+                            <a href="#" class="btn-link" id="nfc-locations" data-toggle="collapse" data-target="#nfs-qualities" aria-expanded="false" aria-controls="nfs-qualities">
+                                <span class="panelTitleBox">
+                                    <i class="fas fa-minus"></i><i class="fas fa-plus"></i>
+                                    <span class="panel-name">Show Branchs With...</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="panel-body collapse in" id="nfs-qualities" aria-expanded="false">
+                            <form class="searchNFC d-block">
+                                <fieldset class="nfcSearch">
+                                    <div>
+                                        <input type="checkbox" id="NFCDriveThruOnly" name="Drive Thru Only" value="Y">
+                                        <label for="NFVDriveThruOnly">Drive Up</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="CoinStar" name="Coin Star" value="Y">
+                                        <label for="CoinStar">Coin Star</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="checkbox" id="TellerServices" name="Teller Services" value="Y">
+                                        <label for="TellerServices">Teller Services</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="_24hourExpressBox" name="24 Hour Express Box" value="Y">
+                                        <label for="_24hourExpressBox">24 Hour Express Box</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="PartnerCreditUnion" name="Partner Credit Union" value="N">
+                                        <label for="PartnerCreditUnion">Partner Credit Unions</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="MemberConsultant" name="Member Consultant" value="Y">
+                                        <label for="MemberConsultant">Member Consultant</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="InstantDebitCardReplacement" name="Instant Debit Card Replacement" value="Y">
+                                        <label for="InstantDebitCardReplacement">Card Replacement</label>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 order-first order-lg-2 col-lg-6" id="center-index">
+            <div class="col-12 text-center" id="mapBlock">
+                <div class="d-block" id="map-wrapper" style="position: relative; overflow: hidden;"></div>
+                <div id="directionsPanel"></div>
+            </div>
+        </div>
+        <div class="col-xs-12 order-last col-lg-3 order-lg-3" id="sidebar-wrapper">
+            <h3 id="sidebar-head">ATM Nearby</h3>
+            <div class="col-12" id="cards-wrapper">
+                @foreach (var card in Model.CleanLocationList)
+                {
+                    <div class="card border-dark rounded-0 accordion" id="id-@card.LocationId">
+                        <div class="card-header" id="heading-@card.LocationId">
+                            <a href="#" class="btn-link" id="button-@card.LocationId" data-toggle="collapse" data-target="#collapse-@card.LocationId" aria-expanded="false" aria-controls="collapse-@card.LocationId">
+                                <span class="cardTitleBox">
+                                    <i class="fas fa-minus"></i><i class="fas fa-plus"></i>
+                                    <span class="Name card-title card-name">@card.Name</span>
+                                </span>
+                            </a>
+                            <p class="address" value="@card.Address">@card.Address</p>
+                            <span class="distance">Distance: @card.MyDistance</span>
+                        </div>
+                        <div class="collapse in" id="collapse-@card.LocationId" aria-expanded="false">
+                            <div class="card-body">
+                                <div class="card-subtitle contactInfo">
+                                    <h4 class="card-title contactInfoHeader">Contact Information</h4>
+                                    <p class="name" value="@card.Name">@card.Name</p>
+                                    <a href="tel:@card.Phone" class="phoneLink" target="_blank"><p class="phone" value="@card.Phone">@card.Phone</p></a>
+                                    <p class="address" value="@card.Address">@card.Address</p>
+                                    <p class="city-state-zip">
+                                        <span class="city" value="@card.City">@card.City</span>
+                                        <span>, </span>
+                                        <span class="state" value="@card.State">@card.State </span>
+                                        <span class="postalCode" value="@card.PostalCode">@card.PostalCode</span>
+                                    </p>
+                                    <a href="@card.WebAddress" class="webAddressLink" target="_blank"><p class="webAddress" value="@card.WebAddress">@card.WebAddress</p></a>
+                                    <hr />
+                                    @Html.Raw(card.SubTitleDisplay)
+                                </div>
+                                <ul class="list-group">@Html.Raw(@card.ListBlockDisplay)</ul>
+                            </div>
+                            <div class="card-footer">@Html.Raw(@card.FooterBlockQuoteDisplay)</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
