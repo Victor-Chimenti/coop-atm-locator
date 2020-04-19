@@ -26,6 +26,14 @@ namespace coop_atm_locator.Models
                 
                 entity.HasKey(e => new { e.Name, e.ReferenceId });
 
+/*                entity.HasKey(e => e.LocationId)
+                .HasName("PK__Location__E7FEA477FF3BFBB2");
+
+                entity.Property(e => e.LocationId)
+                    .HasColumnName("LocationID")
+                    .HasMaxLength(64)
+                    .IsUnicode(false);*/
+
                 entity.Property(e => e.AcceptCash).HasMaxLength(50);
 
                 entity.Property(e => e.AcceptDeposit).HasMaxLength(50);
