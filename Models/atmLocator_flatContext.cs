@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using coop_atm_locator.Controllers;
+using coop_atm_locator.Backend;
 
 namespace coop_atm_locator.Models
 {
