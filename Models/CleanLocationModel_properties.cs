@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace coop_atm_locator.Models
 {
-    public partial class CleanLocationModel
+    public partial class CleanLocationModel_properties
     {
         [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
