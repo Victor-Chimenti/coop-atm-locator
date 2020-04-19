@@ -26,10 +26,26 @@ namespace coop_atm_locator
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration.GetConnectionString("ATMLocatorDatabase");
-            services.AddDbContext<atmLocator_flatContext>(options => options.UseSqlServer(connection,
-                providerOptions => providerOptions.EnableRetryOnFailure()));
+            services.AddDbContext<atmLocator_flatContext>(options =>
+            {
+                //options.UseSqlServer(connection, providerOptions => providerOptions.EnableRetryOnFailure());
 
+                options.UseSqlServer(
+                    connection, /*providerOptions => providerOptions.EnableRetryOnFailure(),*/
+                    x => x.UseNetTopologySuite()
+                );
+            });
             services.AddControllersWithViews();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromDays(1);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Name = ".Maphawks.Session";
+                // Make the session cookie essential
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +63,8 @@ namespace coop_atm_locator
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCookiePolicy();
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -56,7 +73,7 @@ namespace coop_atm_locator
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Locations}/{action=Index}/{id?}");
                 /*endpoints.MapRazorPages();*/
             });
         }
