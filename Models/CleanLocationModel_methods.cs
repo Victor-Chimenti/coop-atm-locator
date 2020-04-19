@@ -58,6 +58,9 @@ namespace coop_atm_locator.Models
                 {
                     Phone = data.Phone;
                 }
+
+
+
                 if (!string.IsNullOrEmpty(data.WebAddress))
                 {
                     var protocol = "http";
@@ -78,6 +81,8 @@ namespace coop_atm_locator.Models
 
                     }
                 }
+
+
 
 
 
@@ -162,145 +167,5 @@ namespace coop_atm_locator.Models
             ListBlockDisplay = GetListDisplayStrings();
             FooterBlockQuoteDisplay = GetFooterBlockQuoteDisplayStrings();
         }
-
-        // assign contact model attributes
-        /*            if (data.Contact != null)
-                    {
-                        if (!string.IsNullOrEmpty(data.Contact.Phone))
-                        {
-                            Phone = data.Contact.Phone;
-                        }
-
-                        if (!string.IsNullOrEmpty(data.Contact.WebAddress))
-                        {
-                            var protocol = "http";
-                            var secureProtocol = "https://";
-                            var commercialDomain = ".com";
-                            var netDomain = ".net";
-                            var nonProfitDomain = ".org";
-                            if (data.Contact.WebAddress.Contains(commercialDomain) || data.Contact.WebAddress.Contains(netDomain) || data.Contact.WebAddress.Contains(nonProfitDomain))
-                            {
-                                if (!data.Contact.WebAddress.Contains(protocol))
-                                {
-                                    WebAddress = secureProtocol + data.Contact.WebAddress;
-                                }
-                                else
-                                {
-                                    WebAddress = data.Contact.WebAddress;
-                                }
-
-                            }
-                        }
-                    }*/
-
-
-        // assign special qualities model attributes
-        /*            if (data.SpecialQualities != null)
-                    {
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.HandicapAccess))
-                        {
-                            HandicapAccess = BoolEnumHelper.StringToEnum(data.SpecialQualities.HandicapAccess);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.Surcharge))
-                        {
-                            Surcharge = BoolEnumHelper.StringToEnum(data.SpecialQualities.Surcharge);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.DriveThruOnly))
-                        {
-                            DriveThruOnly = BoolEnumHelper.StringToEnum(data.SpecialQualities.DriveThruOnly);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.RestrictedAccess))
-                        {
-                            RestrictedAccess = BoolEnumHelper.StringToEnum(data.SpecialQualities.RestrictedAccess);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.AcceptDeposit))
-                        {
-                            AcceptDeposit = BoolEnumHelper.StringToEnum(data.SpecialQualities.AcceptDeposit);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.AcceptCash))
-                        {
-                            AcceptCash = BoolEnumHelper.StringToEnum(data.SpecialQualities.AcceptCash);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.Cashless))
-                        {
-                            Cashless = BoolEnumHelper.StringToEnum(data.SpecialQualities.Cashless);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.SelfServiceDevice))
-                        {
-                            SelfServiceOnly = BoolEnumHelper.StringToEnum(data.SpecialQualities.SelfServiceDevice);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.SelfServiceOnly))
-                        {
-                            SelfServiceOnly = BoolEnumHelper.StringToEnum(data.SpecialQualities.SelfServiceOnly);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.OnMilitaryBase))
-                        {
-                            OnMilitaryBase = BoolEnumHelper.StringToEnum(data.SpecialQualities.OnMilitaryBase);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.MilitaryIdRequired))
-                        {
-                            MilitaryIdRequired = BoolEnumHelper.StringToEnum(data.SpecialQualities.MilitaryIdRequired);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.CoinStar))
-                        {
-                            CoinStar = BoolEnumHelper.StringToEnum(data.SpecialQualities.CoinStar);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.TellerServices))
-                        {
-                            TellerServices = BoolEnumHelper.StringToEnum(data.SpecialQualities.TellerServices);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities._24hourExpressBox))
-                        {
-                            _24hourExpressBox = BoolEnumHelper.StringToEnum(data.SpecialQualities._24hourExpressBox);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.PartnerCreditUnion))
-                        {
-                            PartnerCreditUnion = BoolEnumHelper.StringToEnum(data.SpecialQualities.PartnerCreditUnion);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.MemberConsultant))
-                        {
-                            MemberConsultant = BoolEnumHelper.StringToEnum(data.SpecialQualities.MemberConsultant);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.InstantDebitCardReplacement))
-                        {
-                            InstantDebitCardReplacement = BoolEnumHelper.StringToEnum(data.SpecialQualities.InstantDebitCardReplacement);
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.InstallationType))
-                        {
-                            InstallationType = data.SpecialQualities.InstallationType;
-                        }
-                        if (!string.IsNullOrEmpty(data.SpecialQualities.AccessNotes))
-                        {
-                            AccessNotes = data.SpecialQualities.AccessNotes;
-                        }
-        */
-
-
-
-        /*                if (!string.IsNullOrEmpty(data.CoinStar))
-            {
-                CoinStar = BoolEnumHelper.StringToEnum(data.CoinStar);
-            }
-            if (!string.IsNullOrEmpty(data.TellerServices))
-            {
-                TellerServices = BoolEnumHelper.StringToEnum(data.TellerServices);
-            }
-            if (!string.IsNullOrEmpty(data._24hourExpressBox))
-            {
-                _24hourExpressBox = BoolEnumHelper.StringToEnum(data._24hourExpressBox);
-            }
-            if (!string.IsNullOrEmpty(data.PartnerCreditUnion))
-            {
-                PartnerCreditUnion = BoolEnumHelper.StringToEnum(data.PartnerCreditUnion);
-            }
-            if (!string.IsNullOrEmpty(data.MemberConsultant))
-            {
-                MemberConsultant = BoolEnumHelper.StringToEnum(data.MemberConsultant);
-            }
-            if (!string.IsNullOrEmpty(data.InstantDebitCardReplacement))
-            {
-                InstantDebitCardReplacement = BoolEnumHelper.StringToEnum(data.InstantDebitCardReplacement);
-            }*/
-
     }
 }
