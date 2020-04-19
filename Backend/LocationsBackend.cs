@@ -9,20 +9,20 @@ namespace coop_atm_locator.Backend
 {
     public class LocationsBackend
     {
-        private atmLocator_flatContext context;
+        private DatabaseHelper db;
         //private int TakeSize;
         //private int TakeIndex;
         //private PositionModel point;
 
         public LocationsBackend(atmLocator_flatContext context)
         {
-            this.context = context;
+            db = new DatabaseHelper(context);
         }
 
         public virtual async Task<List<Locations>> IndexAsync()
         {
 
-            var locations_list = await context.ReadMultipleRecordsAsync().ConfigureAwait(false); // Select * join all tables
+            var locations_list = await db.ReadMultipleRecordsAsync().ConfigureAwait(false); // Select * join all tables
 
             return locations_list;
         }
