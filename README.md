@@ -1,0 +1,1 @@
+# coop-atm-locator
