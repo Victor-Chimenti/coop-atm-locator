@@ -14,6 +14,7 @@ $(function assignVisibleItems() {
         ' .hideByDriveThruOnly,' +
         ' .hideBySurcharge,' +
         ' .hideByAcceptDeposit,' +
+        ' .hideByHandicap,' +
         ' .hideByCoinStar,' +
         ' .hideByTellerServices,' +
         ' .hideBy_24hourExpressBox,' +
@@ -222,34 +223,66 @@ $(function () {
 
 
 
-            //   ***   Coin Star   ***   //
+            //   ***   Handicap Access   ***   //
             $(function () {
-                // When the select box Coin Star changes - Execute change function
-                $('#CoinStar').change(function () {
+                // When the select box Handicap Access changes - Execute change function
+                $('#Handicap').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Coin Star items
-                    if ($('#CoinStar:checkbox').is(':checked', true)) {
+                    if ($('#Handicap:checkbox').is(':checked', true)) {
                         if (key) {
                             $('.CoinStar').filter(function (i, e) {
                                 var value = $(this).text();
                                 // Check to see if the Key and Value are a Match
                                 if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideByCoinStar');
+                                    $(this).parents('.card').removeClass('hideByHandicap');
                                 } else {
-                                    $(this).parents('.card').addClass('hideByCoinStar');
+                                    $(this).parents('.card').addClass('hideByHandicap');
                                 }
                             });
                             // Else the Search Key is Null so Reset all Content Items to Visible
                         } else {
-                            $('.card').removeClass('hideByCoinStar');
+                            $('.card').removeClass('hideByHandicap');
                         }
                     } else {
-                        $('.card').removeClass('hideByCoinStar');
+                        $('.card').removeClass('hideByHandicap');
                     }
                     assignVisibleItems();
                 });
             });
+
+
+
+
+            //   ***   Coin Star   ***   //
+            //$(function () {
+            //    // When the select box Coin Star changes - Execute change function
+            //    $('#CoinStar').change(function () {
+            //        // Assign Search Key
+            //        var key = $(this).val();
+            //        // If Search Key is Not Null then Compare to the Coin Star items
+            //        if ($('#CoinStar:checkbox').is(':checked', true)) {
+            //            if (key) {
+            //                $('.CoinStar').filter(function (i, e) {
+            //                    var value = $(this).text();
+            //                    // Check to see if the Key and Value are a Match
+            //                    if (value.match(key)) {
+            //                        $(this).parents('.card').removeClass('hideByCoinStar');
+            //                    } else {
+            //                        $(this).parents('.card').addClass('hideByCoinStar');
+            //                    }
+            //                });
+            //                // Else the Search Key is Null so Reset all Content Items to Visible
+            //            } else {
+            //                $('.card').removeClass('hideByCoinStar');
+            //            }
+            //        } else {
+            //            $('.card').removeClass('hideByCoinStar');
+            //        }
+            //        assignVisibleItems();
+            //    });
+            //});
 
 
 
