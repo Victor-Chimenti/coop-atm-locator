@@ -14,13 +14,7 @@ $(function assignVisibleItems() {
         ' .hideByDriveThruOnly,' +
         ' .hideBySurcharge,' +
         ' .hideByAcceptDeposit,' +
-        ' .hideByHandicapAccess,' +
-        ' .hideByCoinStar,' +
-        ' .hideByTellerServices,' +
-        ' .hideBy_24hourExpressBox,' +
-        ' .hideByPartnerCreditUnion,' +
-        ' .hideByMemberConsultant,' +
-        ' .hideByInstantDebitCardReplacement');
+        ' .hideByHandicapAccess');
     // check to see if array is empty
     if (visibleItems.length == 0) {
         // when array is empty show the results message
