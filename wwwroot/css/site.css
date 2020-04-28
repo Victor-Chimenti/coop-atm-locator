@@ -102,24 +102,24 @@ html {
     font-size: 1.4rem;
 }
 
-    #filterSearch-wrapper a.btn-link .panelTitleBox {
-        display: inline-block;
-        font-size: 1.8rem;
-    }
+#filterSearch-wrapper a.btn-link .panelTitleBox {
+    display: inline-block;
+    font-size: 1.8rem;
+}
 
-    #filterSearch-wrapper a.btn-link .panel-name {
-        color: #192838;
-    }
+#filterSearch-wrapper a.btn-link .panel-name {
+    color: #192838;
+}
 
-    #filterSearch-wrapper form.searchATM fieldset.atmSearch {
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+#filterSearch-wrapper form.searchATM fieldset.atmSearch {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
 
-    #filterSearch-wrapper form.searchNFC fieldset.nfcSearch {
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+#filterSearch-wrapper form.searchNFC fieldset.nfcSearch {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
 
 
 
@@ -165,16 +165,16 @@ html {
     width: 1000%;
 }
 
-    #sidebar-wrapper #sidebar-head {
-        color: #192838;
-        text-align: center;
-    }
+#sidebar-wrapper #sidebar-head {
+    color: #192838;
+    text-align: center;
+}
 
-    #sidebar-wrapper .card {
-        color: #4D5F69;
-        font: Museo Sans 700;
-        stroke: #D5D7D9;
-    }
+#sidebar-wrapper .card {
+    color: #4D5F69;
+    font: Museo Sans 700;
+    stroke: #D5D7D9;
+}
 
 div.card.border-dark {
     border-color: #D5D7D9 !important;
@@ -198,16 +198,16 @@ div.card-header a.btn-link {
     font-size: 1.6rem;
 }
 
-    div.card-header a.btn-link div.cardTitleBox {
-        color: #006979;
-        display: inline-block;
-        font-size: 1.6rem;
-    }
+div.card-header a.btn-link div.cardTitleBox {
+    color: #006979;
+    display: inline-block;
+    font-size: 1.6rem;
+}
 
-        div.card-header a.btn-link div.cardTitleBox span.card-title {
-            color: #006979;
-            font: Museo Sans 700;
-        }
+div.card-header a.btn-link div.cardTitleBox span.card-title {
+    color: #006979;
+    font: Museo Sans 700;
+}
 
 btn-link:hover {
     text-decoration: none;
@@ -307,7 +307,7 @@ div#card-wrapper div.card div.card-header a.btn-link:after span.cardTitleBox i.f
 *   card classes for hide/display
 */
 
-.hideByText, hideResultsMessage, .hideByHours, .hideByDriveThruOnly, .hideBySurcharge, .hideByAcceptDeposit, .hideByCoinStar, .hideByTellerServices, .hideBy_24hourExpressBox, .hideByPartnerCreditUnion, .hideByMemberConsultant, .hideByInstantDebitCardReplacement {
+.hideByText, hideResultsMessage, .hideByHours, .hideByDriveThruOnly, .hideBySurcharge, .hideByAcceptDeposit, .hideByHandicapAccess {
     display: none;
 }
 
