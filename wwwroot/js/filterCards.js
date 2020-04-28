@@ -14,7 +14,7 @@ $(function assignVisibleItems() {
         ' .hideByDriveThruOnly,' +
         ' .hideBySurcharge,' +
         ' .hideByAcceptDeposit,' +
-        ' .hideByHandicap,' +
+        ' .hideByHandicapAccess,' +
         ' .hideByCoinStar,' +
         ' .hideByTellerServices,' +
         ' .hideBy_24hourExpressBox,' +
@@ -226,27 +226,27 @@ $(function () {
             //   ***   Handicap Access   ***   //
             $(function () {
                 // When the select box Handicap Access changes - Execute change function
-                $('#Handicap').change(function () {
+                $('#HandicapAccess').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Coin Star items
-                    if ($('#Handicap:checkbox').is(':checked', true)) {
+                    if ($('#HandicapAccess:checkbox').is(':checked', true)) {
                         if (key) {
-                            $('.CoinStar').filter(function (i, e) {
+                            $('.HandicapAccess').filter(function (i, e) {
                                 var value = $(this).text();
                                 // Check to see if the Key and Value are a Match
                                 if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideByHandicap');
+                                    $(this).parents('.card').removeClass('hideByHandicapAccess');
                                 } else {
-                                    $(this).parents('.card').addClass('hideByHandicap');
+                                    $(this).parents('.card').addClass('hideByHandicapAccess');
                                 }
                             });
                             // Else the Search Key is Null so Reset all Content Items to Visible
                         } else {
-                            $('.card').removeClass('hideByHandicap');
+                            $('.card').removeClass('hideByHandicapAccess');
                         }
                     } else {
-                        $('.card').removeClass('hideByHandicap');
+                        $('.card').removeClass('hideByHandicapAccess');
                     }
                     assignVisibleItems();
                 });
