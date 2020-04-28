@@ -254,163 +254,163 @@ $(function () {
 
 
 
-            //   ***   Teller Services   ***   //
-            $(function () {
-                // When the select box Teller Services changes - Execute change function
-                $('#TellerServices').change(function () {
-                    // Assign Search Key
-                    var key = $(this).val();
-                    // If Search Key is Not Null then Compare to the Teller Services items
-                    if ($('#TellerServices:checkbox').is(':checked', true)) {
-                        if (key) {
-                            $('.TellerServices').filter(function (i, e) {
-                                var value = $(this).text();
-                                // Check to see if the Key and Value are a Match
-                                if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideByTellerServices');
-                                } else {
-                                    $(this).parents('.card').addClass('hideByTellerServices');
-                                }
-                            });
-                            // Else the Search Key is Null so Reset all Content Items to Visible
-                        } else {
-                            $('.card').removeClass('hideByTellerServices');
-                        }
-                    } else {
-                        $('.card').removeClass('hideByTellerServices');
-                    }
-                    assignVisibleItems();
-                });
-            });
+            ////   ***   Teller Services   ***   //
+            //$(function () {
+            //    // When the select box Teller Services changes - Execute change function
+            //    $('#TellerServices').change(function () {
+            //        // Assign Search Key
+            //        var key = $(this).val();
+            //        // If Search Key is Not Null then Compare to the Teller Services items
+            //        if ($('#TellerServices:checkbox').is(':checked', true)) {
+            //            if (key) {
+            //                $('.TellerServices').filter(function (i, e) {
+            //                    var value = $(this).text();
+            //                    // Check to see if the Key and Value are a Match
+            //                    if (value.match(key)) {
+            //                        $(this).parents('.card').removeClass('hideByTellerServices');
+            //                    } else {
+            //                        $(this).parents('.card').addClass('hideByTellerServices');
+            //                    }
+            //                });
+            //                // Else the Search Key is Null so Reset all Content Items to Visible
+            //            } else {
+            //                $('.card').removeClass('hideByTellerServices');
+            //            }
+            //        } else {
+            //            $('.card').removeClass('hideByTellerServices');
+            //        }
+            //        assignVisibleItems();
+            //    });
+            //});
 
 
 
 
-            //   ***   24 Hour Express Box   ***   //
-            $(function () {
-                // When the select box 24 Hour Express changes - Execute change function
-                $('#_24hourExpressBox').change(function () {
-                    // Assign Search Key
-                    var key = $(this).val();
-                    // If Search Key is Not Null then Compare to the 24 Hour Express card items
-                    if ($('#_24hourExpressBox:checkbox').is(':checked', true)) {
-                        if (key) {
-                            $('._24hourExpressBox').filter(function (i, e) {
-                                var value = $(this).text();
-                                // Check to see if the Key and Value are a Match
-                                if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideBy_24hourExpressBox');
-                                } else {
-                                    $(this).parents('.card').addClass('hideBy_24hourExpressBox');
-                                }
-                            });
-                            // Else the Search Key is Null so Reset all Content Items to Visible
-                        } else {
-                            $('.card').removeClass('hideBy_24hourExpressBox');
-                        }
-                    } else {
-                        $('.card').removeClass('hideBy_24hourExpressBox');
-                    }
-                    assignVisibleItems();
-                });
-            });
+            ////   ***   24 Hour Express Box   ***   //
+            //$(function () {
+            //    // When the select box 24 Hour Express changes - Execute change function
+            //    $('#_24hourExpressBox').change(function () {
+            //        // Assign Search Key
+            //        var key = $(this).val();
+            //        // If Search Key is Not Null then Compare to the 24 Hour Express card items
+            //        if ($('#_24hourExpressBox:checkbox').is(':checked', true)) {
+            //            if (key) {
+            //                $('._24hourExpressBox').filter(function (i, e) {
+            //                    var value = $(this).text();
+            //                    // Check to see if the Key and Value are a Match
+            //                    if (value.match(key)) {
+            //                        $(this).parents('.card').removeClass('hideBy_24hourExpressBox');
+            //                    } else {
+            //                        $(this).parents('.card').addClass('hideBy_24hourExpressBox');
+            //                    }
+            //                });
+            //                // Else the Search Key is Null so Reset all Content Items to Visible
+            //            } else {
+            //                $('.card').removeClass('hideBy_24hourExpressBox');
+            //            }
+            //        } else {
+            //            $('.card').removeClass('hideBy_24hourExpressBox');
+            //        }
+            //        assignVisibleItems();
+            //    });
+            //});
 
 
 
 
-            //   ***   Partner Credit Union   ***   //
-            $(function () {
-                // When the select box Partner changes - Execute change function
-                $('#PartnerCreditUnion').change(function () {
-                    // Assign Search Key
-                    var key = $(this).val();
-                    // If Search Key is Not Null then Compare to the Partner card items
-                    if ($('#PartnerCreditUnion:checkbox').is(':checked', true)) {
-                        if (key) {
-                            $('.PartnerCreditUnion').filter(function (i, e) {
-                                var value = $(this).text();
-                                // Check to see if the Key and Value are a Match
-                                if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideByPartnerCreditUnion');
-                                } else {
-                                    $(this).parents('.card').addClass('hideByPartnerCreditUnion');
-                                }
-                            });
-                            // Else the Search Key is Null so Reset all Content Items to Visible
-                        } else {
-                            $('.card').removeClass('hideByPartnerCreditUnion');
-                        }
-                    } else {
-                        $('.card').removeClass('hideByPartnerCreditUnion');
-                    }
-                    assignVisibleItems();
-                });
-            });
+            ////   ***   Partner Credit Union   ***   //
+            //$(function () {
+            //    // When the select box Partner changes - Execute change function
+            //    $('#PartnerCreditUnion').change(function () {
+            //        // Assign Search Key
+            //        var key = $(this).val();
+            //        // If Search Key is Not Null then Compare to the Partner card items
+            //        if ($('#PartnerCreditUnion:checkbox').is(':checked', true)) {
+            //            if (key) {
+            //                $('.PartnerCreditUnion').filter(function (i, e) {
+            //                    var value = $(this).text();
+            //                    // Check to see if the Key and Value are a Match
+            //                    if (value.match(key)) {
+            //                        $(this).parents('.card').removeClass('hideByPartnerCreditUnion');
+            //                    } else {
+            //                        $(this).parents('.card').addClass('hideByPartnerCreditUnion');
+            //                    }
+            //                });
+            //                // Else the Search Key is Null so Reset all Content Items to Visible
+            //            } else {
+            //                $('.card').removeClass('hideByPartnerCreditUnion');
+            //            }
+            //        } else {
+            //            $('.card').removeClass('hideByPartnerCreditUnion');
+            //        }
+            //        assignVisibleItems();
+            //    });
+            //});
 
 
 
 
-            //   ***   Member Consultant   ***   //
-            $(function () {
-                // When the select box Consultant changes - Execute change function
-                $('#MemberConsultant').change(function () {
-                    // Assign Search Key
-                    var key = $(this).val();
-                    // If Search Key is Not Null then Compare to the Consultant items
-                    if ($('#MemberConsultant:checkbox').is(':checked', true)) {
-                        if (key) {
-                            $('.MemberConsultant').filter(function (i, e) {
-                                var value = $(this).text();
-                                // Check to see if the Key and Value are a Match
-                                if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideByMemberConsultant');
-                                } else {
-                                    $(this).parents('.card').addClass('hideByMemberConsultant');
-                                }
-                            });
-                            // Else the Search Key is Null so Reset all Content Items to Visible
-                        } else {
-                            $('.card').removeClass('hideByMemberConsultant');
-                        }
-                    } else {
-                        $('.card').removeClass('hideByMemberConsultant');
-                    }
-                    assignVisibleItems();
-                });
-            });
+            ////   ***   Member Consultant   ***   //
+            //$(function () {
+            //    // When the select box Consultant changes - Execute change function
+            //    $('#MemberConsultant').change(function () {
+            //        // Assign Search Key
+            //        var key = $(this).val();
+            //        // If Search Key is Not Null then Compare to the Consultant items
+            //        if ($('#MemberConsultant:checkbox').is(':checked', true)) {
+            //            if (key) {
+            //                $('.MemberConsultant').filter(function (i, e) {
+            //                    var value = $(this).text();
+            //                    // Check to see if the Key and Value are a Match
+            //                    if (value.match(key)) {
+            //                        $(this).parents('.card').removeClass('hideByMemberConsultant');
+            //                    } else {
+            //                        $(this).parents('.card').addClass('hideByMemberConsultant');
+            //                    }
+            //                });
+            //                // Else the Search Key is Null so Reset all Content Items to Visible
+            //            } else {
+            //                $('.card').removeClass('hideByMemberConsultant');
+            //            }
+            //        } else {
+            //            $('.card').removeClass('hideByMemberConsultant');
+            //        }
+            //        assignVisibleItems();
+            //    });
+            //});
 
 
 
 
 
-            //   ***   Instant Debit Card Replacement   ***   //
-            $(function () {
-                // When the select box Debit Card Replacement changes - Execute change function
-                $('#InstantDebitCardReplacement').change(function () {
-                    // Assign Search Key
-                    var key = $(this).val();
-                    // If Search Key is Not Null then Compare to the Debit Card Replacement items
-                    if ($('#InstantDebitCardReplacement:checkbox').is(':checked', true)) {
-                        if (key) {
-                            $('.InstantDebitCardReplacement').filter(function (i, e) {
-                                var value = $(this).text();
-                                // Check to see if the Key and Value are a Match
-                                if (value.match(key)) {
-                                    $(this).parents('.card').removeClass('hideByInstantDebitCardReplacement');
-                                } else {
-                                    $(this).parents('.card').addClass('hideByInstantDebitCardReplacement');
-                                }
-                            });
-                            // Else the Search Key is Null so Reset all Content Items to Visible
-                        } else {
-                            $('.card').removeClass('hideByInstantDebitCardReplacement');
-                        }
-                    } else {
-                        $('.card').removeClass('hideByInstantDebitCardReplacement');
-                    }
-                    assignVisibleItems();
-                });
-            });
+            ////   ***   Instant Debit Card Replacement   ***   //
+            //$(function () {
+            //    // When the select box Debit Card Replacement changes - Execute change function
+            //    $('#InstantDebitCardReplacement').change(function () {
+            //        // Assign Search Key
+            //        var key = $(this).val();
+            //        // If Search Key is Not Null then Compare to the Debit Card Replacement items
+            //        if ($('#InstantDebitCardReplacement:checkbox').is(':checked', true)) {
+            //            if (key) {
+            //                $('.InstantDebitCardReplacement').filter(function (i, e) {
+            //                    var value = $(this).text();
+            //                    // Check to see if the Key and Value are a Match
+            //                    if (value.match(key)) {
+            //                        $(this).parents('.card').removeClass('hideByInstantDebitCardReplacement');
+            //                    } else {
+            //                        $(this).parents('.card').addClass('hideByInstantDebitCardReplacement');
+            //                    }
+            //                });
+            //                // Else the Search Key is Null so Reset all Content Items to Visible
+            //            } else {
+            //                $('.card').removeClass('hideByInstantDebitCardReplacement');
+            //            }
+            //        } else {
+            //            $('.card').removeClass('hideByInstantDebitCardReplacement');
+            //        }
+            //        assignVisibleItems();
+            //    });
+            //});
         }, 5);
     });
 });

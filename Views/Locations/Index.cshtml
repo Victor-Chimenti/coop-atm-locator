@@ -20,12 +20,12 @@
 <div class="container-fluid">
     <div class="row" id="main-row">
         <div class="col-xs-12 order-2 col-lg-3 order-lg-first" id="filter-wrapper">
-            <h3 id="filter-head">Refine by</h3>
+            <h3 id="filter-head">Filter</h3>
             <div id="filterSearch-wrapper">
                 <form class="searchField d-block">
                     <fieldset class="atmSearch">
                         <div>
-                            <input type="text" class="form-control" name="searchCards" id="keyword_search" placeholder="Search by Keyword" autofocus aria-label="Search Keyword" />
+                            <input type="text" class="form-control" name="searchCards" id="keyword_search" placeholder="Search Instantly" autofocus aria-label="Search Keyword" />
                         </div>
                     </fieldset>
                 </form>
@@ -46,8 +46,8 @@
                                     <label for="Hours">24 Hour</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="DriveThruOnly" name="Drive Thru Only" value="Drive">
-                                    <label for="DriveThruOnly">Drive Up</label>
+                                    <input type="checkbox" id="Handicap" name="Handicap" value="No">
+                                    <label for="Handicap">Handicap Access</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="Surcharge" name="Surcharge" value="No">
@@ -56,6 +56,10 @@
                                 <div>
                                     <input type="checkbox" id="AcceptDeposit" name="Accepts Deposit" value="Yes">
                                     <label for="AcceptDeposit">Accepts Deposits</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="DriveThruOnly" name="Drive Thru Only" value="Drive">
+                                    <label for="DriveThruOnly">Drive Up</label>
                                 </div>
                             </fieldset>
                         </form>
