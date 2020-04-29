@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// TODO: parse for nulls and ensure id for each collapsible unit
+
 namespace coop_atm_locator.Models
 {
     public partial class CleanLocationModel
