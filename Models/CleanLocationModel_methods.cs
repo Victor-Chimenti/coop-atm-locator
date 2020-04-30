@@ -46,10 +46,10 @@ namespace coop_atm_locator.Models
                     State = StateEnumHelper.StringToEnum(data.State);
                     StateTitle = State.ToTitle();
                 }
-                if (!string.IsNullOrEmpty(data.Country))
+/*                if (!string.IsNullOrEmpty(data.Country))
                 {
                     Country = data.Country;
-                }
+                }*/
                 if (!string.IsNullOrEmpty(data.RetailOutlet))
                 {
                     RetailOutlet = data.RetailOutlet;
