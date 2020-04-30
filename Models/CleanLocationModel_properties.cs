@@ -14,10 +14,6 @@ namespace coop_atm_locator.Models
         [DisplayFormat(ConvertEmptyStringToNull = true)]
         public string ReferenceId { get; set; }
 
-/*        [Required(AllowEmptyStrings = false)]
-        [DisplayFormat(ConvertEmptyStringToNull = true)]
-        public string LocationId { get; set; }*/
-
         [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
         [DisplayName("Institution")]
@@ -53,11 +49,6 @@ namespace coop_atm_locator.Models
         [DisplayFormat(ConvertEmptyStringToNull = true)]
         [DisplayName("State")]
         public string StateTitle { get; set; }
-
-/*        [Required(AllowEmptyStrings = false)]
-        [DisplayFormat(ConvertEmptyStringToNull = true)]
-        [DisplayName("Country")]
-        public string Country { get; set; }*/
 
         [DisplayName("Latitude")]
         public decimal Latitude { get; set; } = 0.0M;
@@ -122,23 +113,6 @@ namespace coop_atm_locator.Models
 
         [DisplayName("Self Service Device")]
         public BooleanEnum SelfServiceDevice { get; set; }
-
-/*        [DisplayName("CoinStar")]
-        public BooleanEnum CoinStar { get; set; }
-
-        [DisplayName("Teller Services")]
-        public BooleanEnum TellerServices { get; set; }
-
-        [DisplayName("24 Hour Express Box")]
-        public BooleanEnum _24hourExpressBox { get; set; }
-        [DisplayName("Partner Credit Union")]
-        public BooleanEnum PartnerCreditUnion { get; set; }
-
-        [DisplayName("Member Consultant")]
-        public BooleanEnum MemberConsultant { get; set; }
-
-        [DisplayName("Instant Debit Card Replacement")]
-        public BooleanEnum InstantDebitCardReplacement { get; set; }*/
 
         [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
