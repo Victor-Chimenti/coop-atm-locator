@@ -50,14 +50,16 @@ namespace coop_atm_locator.Models
                 {
                     Hours = data.Hours;
                 }
-                if (!string.IsNullOrEmpty(data.Phone))
+
+
+
+                // check phone and webaddress for string literal containing null
+                if (!string.IsNullOrEmpty(data.Phone) && !data.Phone.Contains("null"))
                 {
                     Phone = data.Phone;
                 }
 
-
-
-                if (!string.IsNullOrEmpty(data.WebAddress))
+                if (!string.IsNullOrEmpty(data.WebAddress) && !data.WebAddress.Contains("null"))
                 {
                     var protocol = "http";
                     var secureProtocol = "https://";
