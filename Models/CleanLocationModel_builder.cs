@@ -14,7 +14,7 @@ namespace coop_atm_locator.Models
         {
             var subTitle = string.Format(@"<p class=""subTitle {0} empty""></p>", Key);
 
-            if (!string.IsNullOrEmpty(Title))
+            if (!string.IsNullOrEmpty(Title) && !Title.Contains("null"))
             {
                 subTitle = string.Format(@"<p class=""subTitle {0}"" value='{2}'> {1}: {2} </p>", Key, Display, Title);
             }
