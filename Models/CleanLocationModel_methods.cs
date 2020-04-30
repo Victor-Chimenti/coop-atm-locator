@@ -12,10 +12,6 @@ namespace coop_atm_locator.Models
             // assign locations model attributes
             if (data != null)
             {
-                /*                if (!string.IsNullOrEmpty(data.LocationId))
-                                {
-                                    LocationId = data.LocationId;
-                                }*/
                 if (!string.IsNullOrEmpty(data.ReferenceId))
                 {
                     ReferenceId = data.ReferenceId;
@@ -46,10 +42,6 @@ namespace coop_atm_locator.Models
                     State = StateEnumHelper.StringToEnum(data.State);
                     StateTitle = State.ToTitle();
                 }
-/*                if (!string.IsNullOrEmpty(data.Country))
-                {
-                    Country = data.Country;
-                }*/
                 if (!string.IsNullOrEmpty(data.RetailOutlet))
                 {
                     RetailOutlet = data.RetailOutlet;
