@@ -14,6 +14,7 @@ $(function assignVisibleItems() {
         ' .hideByDriveThruOnly,' +
         ' .hideBySurcharge,' +
         ' .hideByAcceptDeposit,' +
+        ' .hideBySelfServiceOnly,' +
         ' .hideByHandicapAccess');
     // check to see if array is empty
     if (visibleItems.length == 0) {
@@ -241,6 +242,38 @@ $(function () {
                         }
                     } else {
                         $('.card').removeClass('hideByDriveThruOnly');
+                    }
+                    assignVisibleItems();
+                });
+            });
+
+
+
+
+            //   ***   Self Service Only   ***   //
+            $(function () {
+                // When the select box Self Service Only changes - Execute change function
+                $('#SelfServiceOnly').change(function () {
+                    // Assign Search Key
+                    var key = $(this).val();
+                    // If Search Key is Not Null then Compare to the ccepts Deposits items
+                    if ($('#SelfServiceOnly:checkbox').is(':checked', true)) {
+                        if (key) {
+                            $('.SelfServiceOnly').filter(function (i, e) {
+                                var value = $(this).text();
+                                // Check to see if the Key and Value are a Match
+                                if (value.match(key)) {
+                                    $(this).parents('.card').removeClass('hideBySelfServiceOnly');
+                                } else {
+                                    $(this).parents('.card').addClass('hideBySelfServiceOnly');
+                                }
+                            });
+                            // Else the Search Key is Null so Reset all Content Items to Visible
+                        } else {
+                            $('.card').removeClass('hideBySelfServiceOnly');
+                        }
+                    } else {
+                        $('.card').removeClass('hideBySelfServiceOnly');
                     }
                     assignVisibleItems();
                 });

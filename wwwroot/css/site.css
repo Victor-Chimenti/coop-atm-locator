@@ -307,7 +307,7 @@ div#card-wrapper div.card div.card-header a.btn-link:after span.cardTitleBox i.f
 *   card classes for hide/display
 */
 
-.hideByText, .hideResultsMessage, .hideByHours, .hideByDriveThruOnly, .hideBySurcharge, .hideByAcceptDeposit, .hideByHandicapAccess {
+.hideByText, .hideResultsMessage, .hideByHours, .hideByDriveThruOnly, .hideBySurcharge, .hideByAcceptDeposit, .hideBySelfServiceOnly, .hideByHandicapAccess {
     display: none;
 }
 
