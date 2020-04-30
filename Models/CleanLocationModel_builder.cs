@@ -33,7 +33,6 @@ namespace coop_atm_locator.Models
             subTitle += BuildSubTitleDisplayTag("InstallationType", "Installation Type", InstallationType);
             subTitle += BuildSubTitleDisplayTag("AccessNotes", "Notes", AccessNotes);
 
-
             return subTitle;
         }
 
@@ -96,13 +95,12 @@ namespace coop_atm_locator.Models
             listBlock += CreateBuildListBlockIfYes("OnMilitaryBase", "On Military Base", OnMilitaryBase.ToTitle());
             listBlock += CreateBuildListBlockIfYes("MilitaryIDRequired", "Military ID Required", MilitaryIdRequired.ToTitle());
             listBlock += CreateBuildListBlockIfYes("RestrictedAccess", "Restricted Access", RestrictedAccess.ToTitle());
-            listBlock += CreateBuildListBlockIfYes("CoinStar", "CoinStar", CoinStar.ToTitle());
+/*            listBlock += CreateBuildListBlockIfYes("CoinStar", "CoinStar", CoinStar.ToTitle());
             listBlock += CreateBuildListBlockIfYes("TellerServices", "Teller Services", TellerServices.ToTitle());
             listBlock += CreateBuildListBlockIfYes("_24hourExpressBox", "24 Hour Express Box", _24hourExpressBox.ToTitle());
             listBlock += CreateBuildListBlockIfNo("PartnerCreditUnion", "Partner Credit Union", PartnerCreditUnion.ToTitle());
             listBlock += CreateBuildListBlockIfYes("MemberConsultant", "Member Consultant", MemberConsultant.ToTitle());
-            listBlock += CreateBuildListBlockIfYes("InstantDebitCardReplacement", "Instant Debit Card Replacement", InstantDebitCardReplacement.ToTitle());
-
+            listBlock += CreateBuildListBlockIfYes("InstantDebitCardReplacement", "Instant Debit Card Replacement", InstantDebitCardReplacement.ToTitle());*/
 
             return listBlock;
         }
