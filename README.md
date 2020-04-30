@@ -1,9 +1,6 @@
 # COOP ATM Locator
 MVC Razor Page ATM Locator
 
-## TODO 20200428:
-- The empty card html tags that will not continue post migration can be removed from the view model builder
-
 ## Views - Locations - Index
 This is the index page that renders as Home and contains the  map, the card sidebar and the filter search options. It uses a 3 column layout.
 1. **div#filter-wrapper**
