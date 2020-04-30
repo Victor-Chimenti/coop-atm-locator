@@ -14,9 +14,9 @@ namespace coop_atm_locator.Models
         [DisplayFormat(ConvertEmptyStringToNull = true)]
         public string ReferenceId { get; set; }
 
-        [Required(AllowEmptyStrings = false)]
+/*        [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
-        public string LocationId { get; set; }
+        public string LocationId { get; set; }*/
 
         [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
@@ -54,10 +54,10 @@ namespace coop_atm_locator.Models
         [DisplayName("State")]
         public string StateTitle { get; set; }
 
-        [Required(AllowEmptyStrings = false)]
+/*        [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
         [DisplayName("Country")]
-        public string Country { get; set; }
+        public string Country { get; set; }*/
 
         [DisplayName("Latitude")]
         public decimal Latitude { get; set; } = 0.0M;
@@ -123,7 +123,7 @@ namespace coop_atm_locator.Models
         [DisplayName("Self Service Device")]
         public BooleanEnum SelfServiceDevice { get; set; }
 
-        [DisplayName("CoinStar")]
+/*        [DisplayName("CoinStar")]
         public BooleanEnum CoinStar { get; set; }
 
         [DisplayName("Teller Services")]
@@ -138,7 +138,7 @@ namespace coop_atm_locator.Models
         public BooleanEnum MemberConsultant { get; set; }
 
         [DisplayName("Instant Debit Card Replacement")]
-        public BooleanEnum InstantDebitCardReplacement { get; set; }
+        public BooleanEnum InstantDebitCardReplacement { get; set; }*/
 
         [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
