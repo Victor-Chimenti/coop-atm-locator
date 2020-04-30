@@ -122,33 +122,33 @@ $(function () {
 
 
             //   ***   Handicap Access   ***   //
-            //$(function () {
-            //    // When the select box Handicap Access changes - Execute change function
-            //    $('#HandicapAccess').change(function () {
-            //        // Assign Search Key
-            //        var key = $(this).val();
-            //        // If Search Key is Not Null then Compare to the Coin Star items
-            //        if ($('#HandicapAccess:checkbox').is(':checked', true)) {
-            //            if (key) {
-            //                $('.HandicapAccess').filter(function (i, e) {
-            //                    var value = $(this).text();
-            //                    // Check to see if the Key and Value are a Match
-            //                    if (value.match(key)) {
-            //                        $(this).parents('.card').removeClass('hideByHandicapAccess');
-            //                    } else {
-            //                        $(this).parents('.card').addClass('hideByHandicapAccess');
-            //                    }
-            //                });
-            //                // Else the Search Key is Null so Reset all Content Items to Visible
-            //            } else {
-            //                $('.card').removeClass('hideByHandicapAccess');
-            //            }
-            //        } else {
-            //            $('.card').removeClass('hideByHandicapAccess');
-            //        }
-            //        assignVisibleItems();
-            //    });
-            //});
+            $(function () {
+                // When the select box HandicapAccess changes - Execute change function
+                $('#HandicapAccess').change(function () {
+                    // Assign Search Key
+                    var key = $(this).val();
+                    // If Search Key is Not Null then Compare to the ccepts Deposits items
+                    if ($('#HandicapAccess:checkbox').is(':checked', true)) {
+                        if (key) {
+                            $('.HandicapAccess').filter(function (i, e) {
+                                var value = $(this).text();
+                                // Check to see if the Key and Value are a Match
+                                if (value.match(key)) {
+                                    $(this).parents('.card').removeClass('hideByHandicapAccess');
+                                } else {
+                                    $(this).parents('.card').addClass('hideByHandicapAccess');
+                                }
+                            });
+                            // Else the Search Key is Null so Reset all Content Items to Visible
+                        } else {
+                            $('.card').removeClass('hideByHandicapAccess');
+                        }
+                    } else {
+                        $('.card').removeClass('hideByHandicapAccess');
+                    }
+                    assignVisibleItems();
+                });
+            });
 
 
 
