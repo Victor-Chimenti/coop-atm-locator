@@ -12,10 +12,14 @@ namespace coop_atm_locator.Models
             // assign locations model attributes
             if (data != null)
             {
-/*                if (!string.IsNullOrEmpty(data.LocationId))
+                /*                if (!string.IsNullOrEmpty(data.LocationId))
+                                {
+                                    LocationId = data.LocationId;
+                                }*/
+                if (!string.IsNullOrEmpty(data.ReferenceId))
                 {
-                    LocationId = data.LocationId;
-                }*/
+                    ReferenceId = data.ReferenceId;
+                }
                 if (!string.IsNullOrEmpty(data.Name))
                 {
                     Name = data.Name;

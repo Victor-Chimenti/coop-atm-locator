@@ -78,9 +78,9 @@
             <div class="col-12" id="cards-wrapper">
                 @foreach (var card in Model.CleanLocationList)
                 {
-                    <div class="card border-dark rounded-0 accordion" id="id-@card.LocationId">
-                        <div class="card-header" id="heading-@card.LocationId">
-                            <a href="#" class="btn-link" id="button-@card.LocationId" data-toggle="collapse" data-target="#collapse-@card.LocationId" aria-expanded="false" aria-controls="collapse-@card.LocationId">
+                    <div class="card border-dark rounded-0 accordion" id="id-@card.ReferenceId">
+                        <div class="card-header" id="heading-@card.ReferenceId">
+                            <a href="#" class="btn-link" id="button-@card.ReferenceId" data-toggle="collapse" data-target="#collapse-@card.ReferenceId" aria-expanded="false" aria-controls="collapse-@card.ReferenceId">
                                 <span class="cardTitleBox">
                                     <i class="fas fa-minus"></i><i class="fas fa-plus"></i>
                                     <span class="Name card-title card-name">@card.Name</span>
@@ -89,7 +89,7 @@
                             <p class="address" value="@card.Address">@card.Address</p>
                             <span class="distance">Distance: @card.MyDistance</span>
                         </div>
-                        <div class="collapse in" id="collapse-@card.LocationId" aria-expanded="false">
+                        <div class="collapse in" id="collapse-@card.ReferenceId" aria-expanded="false">
                             <div class="card-body">
                                 <div class="card-subtitle contactInfo">
                                     <h4 class="card-title contactInfoHeader">Contact Information</h4>

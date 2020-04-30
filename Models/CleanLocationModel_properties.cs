@@ -12,6 +12,10 @@ namespace coop_atm_locator.Models
     {
         [Required(AllowEmptyStrings = false)]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
+        public string ReferenceId { get; set; }
+
+        [Required(AllowEmptyStrings = false)]
+        [DisplayFormat(ConvertEmptyStringToNull = true)]
         public string LocationId { get; set; }
 
         [Required(AllowEmptyStrings = false)]
