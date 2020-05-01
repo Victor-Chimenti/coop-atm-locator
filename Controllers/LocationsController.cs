@@ -114,7 +114,7 @@ namespace coop_atm_locator.Controllers
             }
 
             // sort the clean results list by distance and reduce by range
-            cleanResults.CleanLocationList = cleanResults.CleanLocationList.OrderBy(x => x.MyDistance).ToList().GetRange(0, 16);
+            cleanResults.CleanLocationList = cleanResults.CleanLocationList.OrderBy(x => x.MyDistance).ToList().GetRange(0, 512);
 
 
             return cleanResults;
