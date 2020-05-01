@@ -128,13 +128,11 @@ $(function () {
                 $('#HandicapAccess').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
-                    console.log("HandicapAccess key: " + key);
                     // If Search Key is Not Null then Compare to the ccepts Deposits items
                     if ($('#HandicapAccess:checkbox').is(':checked', true)) {
                         if (key) {
                             $('.HandicapAccess').filter(function (i, e) {
                                 var value = $(this).text();
-                                console.log("HandicapAccess value: " + value);
                                 // Check to see if the Key and Value are a Match
                                 if (value.match(key)) {
                                     $(this).parents('.card').removeClass('hideByHandicapAccess');
@@ -258,13 +256,11 @@ $(function () {
                 $('#SelfServiceOnly').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
-                    console.log("SelfServiceOnly key: " + key);
                     // If Search Key is Not Null then Compare to the ccepts Deposits items
                     if ($('#SelfServiceOnly:checkbox').is(':checked', true)) {
                         if (key) {
                             $('.SelfServiceOnly').filter(function (i, e) {
                                 var value = $(this).text();
-                                console.log("SelfServiceOnly value: " + value);
                                 // Check to see if the Key and Value are a Match
                                 if (value.match(key)) {
                                     $(this).parents('.card').removeClass('hideBySelfServiceOnly');
